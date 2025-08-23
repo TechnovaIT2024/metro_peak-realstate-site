@@ -6,7 +6,7 @@ import { FaPlay } from "react-icons/fa";
 
 const HeroSectionBackground = () => {
   return (
-    <div className="relative w-full md:h-screen h-[380px] overflow-hidden">
+    <div className="relative w-full h-[60vh] md:h-[80vh] lg:h-[110vh] overflow-hidden">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -83,8 +83,8 @@ const HeroSectionBackground = () => {
         </svg>
 
         {/* Center Button */}
-        <button className="flex items-center justify-center w-[60px] h-[60px] border border-white rounded-full shadow-lg hover:bg-[#fc665e] transition">
-          <FaPlay className="text-[#fc665e] hover:text-white" />
+        <button className="flex items-center justify-center w-[60px] h-[60px] border border-white rounded-full shadow-lg hover:bg-[#FF4136] transition">
+          <FaPlay className="text-[#FF4136] hover:text-white" />
         </button>
       </div>
     </div>

@@ -62,13 +62,13 @@ const NavBar = () => {
               <li key={path} className="relative group">
                 <NavLink
                   exact={path === "/"}
-                  activeClassName="text-[#fc665e] font-bold duration-300"
+                  activeClassName="text-[#FF4136] font-bold duration-300"
                   href={path}
                   className="inline-block"
                 >
                   {title}
                 </NavLink>
-                <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#fc665e] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#FF4136] transition-all duration-300 group-hover:w-full"></span>
               </li>
             ))}
           </ul>
@@ -86,7 +86,7 @@ const NavBar = () => {
           >
             {/* Search Icon */}
             <div
-              className={`text-white flex items-center justify-center transition-all duration-500 ease-in-out bg-[#fc665e] p-[10px] rounded-full ${
+              className={`text-white flex items-center justify-center transition-all duration-500 ease-in-out bg-[#FF4136] p-[10px] rounded-full ${
                 isOpen ? "mr-[5px]" : "mx-auto"
               }`}
             >
@@ -109,7 +109,7 @@ const NavBar = () => {
       <div className="md:hidden">
         {/* Hamburger Icon */}
         <button
-          className="fixed top-4 right-4 p-2 bg-[#fc665e] text-white rounded-md md:hidden z-10"
+          className="fixed top-4 right-4 p-2 bg-[#FF4136] text-white rounded-md md:hidden z-10"
           onClick={() => setIsDrawerOpen(!isDrawerOpen)}
         >
           <FaBars />
@@ -117,7 +117,7 @@ const NavBar = () => {
 
         {/* Drawer Navigation */}
         <nav
-          className={`fixed top-0 right-0 h-full w-64 bg-[#fc665e] text-white transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 right-0 h-full w-64 bg-[#FF4136] text-white transform transition-transform duration-300 ease-in-out ${
             isDrawerOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden z-50`}
         >
@@ -132,7 +132,7 @@ const NavBar = () => {
               <li key={path} className="text-[16px] font-semibold">
                 <NavLink
                   exact={path === "/"}
-                  activeClassName="bg-[#Ffff] px-10 py-2 font-bold duration-300 rounded-[8px] text-[#fc665e]"
+                  activeClassName="bg-[#Ffff] px-10 py-2 font-bold duration-300 rounded-[8px] text-[#FF4136]"
                   href={path}
                 >
                   {title}
