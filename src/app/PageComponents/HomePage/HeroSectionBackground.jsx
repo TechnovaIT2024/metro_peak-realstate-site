@@ -23,7 +23,7 @@ const HeroSectionBackground = () => {
       {/* Content on top of video */}
       <div className="relative z-10 flex md:items-center justify-start h-full">
         <div className="text-white text-2xl lg:px-[40px] md:px-[30px] px-[20px] lg:translate-y-[50px] translate-y-[50px]">
-          <p className="md:text-[70px] text-[40px] font-semibold">
+          <p className="md:text-[70px] text-[45px] font-semibold">
             Find Your Perfect <br /> Place To{" "}
             <span className="text-[#FF4136] font-bold md:text-[70px]">
               <Typewriter
@@ -44,8 +44,20 @@ const HeroSectionBackground = () => {
           </p>
 
           {/* Button placed right under the text */}
-          <button className="mt-[25px] px-6 py-3 bg-[#FF4136] text-white rounded-full text-lg font-medium hover:bg-[#FF4136] transition">
-            Explore More
+          <button
+            className="
+  relative font-medium text-lg tracking-wide rounded-xl cursor-pointer border-0
+  bg-gradient-to-r from-[#FF4136] to-[#ff4a41] text-[#000] hover:text-[#fff] overflow-hidden
+  transition active:scale-95
+  before:content-[''] before:absolute before:top-0  before:w-[120%] before:h-full
+  before:bg-white before:-left-[10%] before:skew-x-[30deg] 
+  before:transition-transform before:duration-400 before:ease-[cubic-bezier(0.3,1,0.8,1)]
+  hover:before:translate-x-full
+ mt-[10px]"
+          >
+            <span className="relative z-10 inline-flex items-center px-5 py-3 transition-colors duration-400">
+              Explore More
+            </span>
           </button>
         </div>
       </div>
@@ -71,8 +83,8 @@ const HeroSectionBackground = () => {
         </svg>
 
         {/* Center Button */}
-        <button className="flex items-center justify-center w-[60px] h-[60px] border border-white rounded-full shadow-lg hover:bg-red-500 transition">
-          <FaPlay className="text-red-500 hover:text-white" />
+        <button className="flex items-center justify-center w-[60px] h-[60px] border border-white rounded-full shadow-lg hover:bg-[#fc665e] transition">
+          <FaPlay className="text-[#fc665e] hover:text-white" />
         </button>
       </div>
     </div>

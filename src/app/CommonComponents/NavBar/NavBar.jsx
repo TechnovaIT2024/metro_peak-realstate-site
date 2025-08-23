@@ -9,6 +9,11 @@ import { FaRegCircleXmark } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import demoLogo from "../../../../public/demo logo.png";
 
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
 const NavBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -24,11 +29,11 @@ const NavBar = () => {
     },
     {
       path: "/services",
-      title: "OUR SERVICES",
+      title: "PROPERTY'S",
     },
     {
       path: "/portfolio",
-      title: "OUR PORTFOLIO",
+      title: "BLOG'S",
     },
     {
       path: "/contact",
@@ -40,7 +45,7 @@ const NavBar = () => {
     <div className="w-full border-t-0 border-b-0 md:border-t-[1px] md:border-b-[1px] border-[#68707A]">
       {/* desktop navigation bar */}
       <nav className="md:flex justify-between items-center lg:px-[40px] md:px-[30px] px-[20px] py-[15px] hidden mx-auto">
-        <div className="">
+        <div className="w-[20%]">
           <Link href={"/"}>
             <Image
               src={demoLogo}
@@ -51,26 +56,26 @@ const NavBar = () => {
           </Link>
         </div>
 
-        <div>
-          <ul className="flex items-center space-x-5 text-[16px] text-[#ffffff] duration-300 font-medium">
+        <div className="w-[60%]">
+          <ul className="flex items-center justify-center space-x-[20px] text-[16px] text-[#ffffff] duration-300 font-medium">
             {NavLinks.map(({ path, title }) => (
               <li key={path} className="relative group">
                 <NavLink
                   exact={path === "/"}
-                  activeClassName="text-[#FF4136] font-bold duration-300"
+                  activeClassName="text-[#fc665e] font-bold duration-300"
                   href={path}
                   className="inline-block"
                 >
                   {title}
                 </NavLink>
-                <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#FF4136] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#fc665e] transition-all duration-300 group-hover:w-full"></span>
               </li>
             ))}
           </ul>
         </div>
 
         <div
-          className="flex items-center space-x-2"
+          className="flex items-center space-x-2 w-[20%] justify-end"
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
         >
@@ -81,7 +86,7 @@ const NavBar = () => {
           >
             {/* Search Icon */}
             <div
-              className={`text-white flex items-center justify-center transition-all duration-500 ease-in-out bg-[#FF4136] p-[10px] rounded-full ${
+              className={`text-white flex items-center justify-center transition-all duration-500 ease-in-out bg-[#fc665e] p-[10px] rounded-full ${
                 isOpen ? "mr-[5px]" : "mx-auto"
               }`}
             >
@@ -104,7 +109,7 @@ const NavBar = () => {
       <div className="md:hidden">
         {/* Hamburger Icon */}
         <button
-          className="fixed top-4 right-4 p-2 bg-[#2D3091] text-white rounded-md md:hidden z-10"
+          className="fixed top-4 right-4 p-2 bg-[#fc665e] text-white rounded-md md:hidden z-10"
           onClick={() => setIsDrawerOpen(!isDrawerOpen)}
         >
           <FaBars />
@@ -112,7 +117,7 @@ const NavBar = () => {
 
         {/* Drawer Navigation */}
         <nav
-          className={`fixed top-0 right-0 h-full w-64 bg-[#2D3091] text-white transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 right-0 h-full w-64 bg-[#fc665e] text-white transform transition-transform duration-300 ease-in-out ${
             isDrawerOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden z-50`}
         >
@@ -124,10 +129,10 @@ const NavBar = () => {
           </button>
           <ul className="mt-16 space-y-6 p-4">
             {NavLinks.map(({ path, title }) => (
-              <li key={path}>
+              <li key={path} className="text-[16px] font-semibold">
                 <NavLink
                   exact={path === "/"}
-                  activeClassName="bg-[#F0018E] px-10 py-2 font-bold duration-300 rounded-tl-[20px] rounded-br-[20px]"
+                  activeClassName="bg-[#Ffff] px-10 py-2 font-bold duration-300 rounded-[8px] text-[#fc665e]"
                   href={path}
                 >
                   {title}
@@ -135,6 +140,13 @@ const NavBar = () => {
               </li>
             ))}
           </ul>
+
+          <div className="p-4 flex gap-[15px] items-center absolute bottom-0 border-t-[1px] border-white w-full">
+            <FaFacebookF className="text-[25px] text-white"></FaFacebookF>
+        <FaTwitter className="text-[25px] text-white"></FaTwitter>
+        <FaInstagram className="text-[25px] text-white"></FaInstagram>
+        <FaLinkedin className="text-[25px] text-white"></FaLinkedin>
+          </div>
         </nav>
       </div>
     </div>

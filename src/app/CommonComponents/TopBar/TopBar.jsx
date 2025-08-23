@@ -12,10 +12,10 @@ const TopBar = () => {
       <div className="w-full flex items-center gap-[10px]">
         <div className="flex items-center gap-[5px]">
           <div>
-            <IoMdMail className="text-[22px] text-[#FF4136]" />
+            <IoMdMail className="text-[22px] text-[#fc665e]" />
           </div>
           <div>
-            <p className="text-[14px] font-normal text-white hover:text-[#FF4136] duration-300">
+            <p className="text-[14px] font-normal text-white hover:text-[#fc665e] duration-300">
               info.metro_peak@gmail.com
             </p>
           </div>
@@ -23,20 +23,20 @@ const TopBar = () => {
 
         <div className="flex items-center gap-[5px]">
           <div>
-            <IoIosCall className="text-[22px] text-[#FF4136]" />
+            <IoIosCall className="text-[22px] text-[#fc665e]" />
           </div>
           <div>
-            <p className="text-[14px] font-normal text-white hover:text-[#FF4136] duration-300">
+            <p className="text-[14px] font-normal text-white hover:text-[#fc665e] duration-300">
               +880 1555-45 45 45
             </p>
           </div>
         </div>
       </div>
       <div className="w-full flex gap-[20px] items-center justify-end">
-        <FaFacebookF className="text-[22px] text-white hover:text-[#FF4136] duration-300"></FaFacebookF>
-        <FaTwitter className="text-[22px] text-white hover:text-[#FF4136] duration-300"></FaTwitter>
-        <FaInstagram className="text-[22px] text-white hover:text-[#FF4136] duration-300"></FaInstagram>
-        <FaLinkedin className="text-[22px] text-white hover:text-[#FF4136] duration-300"></FaLinkedin>
+        <FaFacebookF className="text-[22px] text-white hover:text-[#fc665e] duration-300"></FaFacebookF>
+        <FaTwitter className="text-[22px] text-white hover:text-[#fc665e] duration-300"></FaTwitter>
+        <FaInstagram className="text-[22px] text-white hover:text-[#fc665e] duration-300"></FaInstagram>
+        <FaLinkedin className="text-[22px] text-white hover:text-[#fc665e] duration-300"></FaLinkedin>
       </div>
     </div>
   );
