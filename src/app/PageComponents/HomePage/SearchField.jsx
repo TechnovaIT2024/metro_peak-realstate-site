@@ -9,13 +9,13 @@ const SearchField = () => {
         style={{ clipPath: "polygon(2% 0, 98% 0, 100% 100%, 0% 100%)" }}
       ></div>
 
-      <div className="rounded-[5px] shadow-xl bg-[#ffffff] border border-[#d8d8d8] w-[86%] mx-auto -mt-[16px] px-[20px] pt-[15px] pb-[35px] relative z-20">
+      <div className="rounded-[5px] shadow-xl shadow-[#FFEFEE] bg-[#ffffff] border border-[#d8d8d8] w-[86%] mx-auto -mt-[16px] px-[20px] pt-[15px] pb-[35px] relative z-20">
 
         <div className="text-center pb-[30px]">
             <h2 className="text-[24px] font-bold uppercase">Find Your <span className="text-[#FF4136] border-b-2 pb-[0.5px]">Property</span></h2>
         </div>
         
-        <div class="md:flex gap-[15px] md:space-y-0 space-y-[10px]">
+        <div className="md:flex gap-[15px] md:space-y-0 space-y-[10px]">
           <div className="flex flex-col w-full">
             <label
               htmlFor="Search home"

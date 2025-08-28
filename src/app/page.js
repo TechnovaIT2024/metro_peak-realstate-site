@@ -3,11 +3,12 @@ import NavBar from "./CommonComponents/NavBar/NavBar";
 import TopBar from "./CommonComponents/TopBar/TopBar";
 import HeroSectionBackground from "./PageComponents/HomePage/HeroSectionBackground";
 import SearchField from "./PageComponents/HomePage/SearchField";
+import PopularProperty from "./PageComponents/HomePage/PopularProperty";
+import ChooseUs from "./PageComponents/HomePage/ChooseUs";
 
 const HomePage = () => {
   return (
     <div className="w-full">
-
       {/* ---------------- Hero Section ---------------- */}
       <div className="relative w-full h-[60vh] md:h-[80vh] lg:h-[110vh]">
         {/* Background Video/Image */}
@@ -28,8 +29,12 @@ const HomePage = () => {
       </div>
 
       {/* ---------------- Other Sections ---------------- */}
-      <div className="border border-green-500 mt-[20px]">
-        <h2 className="">The New Component</h2>
+      <div className="md:mx-[40px] mx-[25px]">
+        <PopularProperty></PopularProperty>
+      </div>
+
+      <div className="md:mx-[40px] mx-[25px] md:mt-[40px] mt-[25px]">
+        <ChooseUs></ChooseUs>
       </div>
     </div>
   );
