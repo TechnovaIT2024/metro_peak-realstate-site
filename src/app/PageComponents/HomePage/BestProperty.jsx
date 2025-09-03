@@ -94,7 +94,7 @@ const PopularProperty = () => {
     <div>
       <div className="text-center mt-[50px] mb-[40px]">
         <h2 className="text-[35px] font-bold uppercase">
-          Featured{" "}
+          Best{" "}
           <span className="text-[#FF4136] border-b-2 pb-[0.5px]">
             Property's
           </span>

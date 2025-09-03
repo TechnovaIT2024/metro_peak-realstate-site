@@ -3,8 +3,9 @@ import NavBar from "./CommonComponents/NavBar/NavBar";
 import TopBar from "./CommonComponents/TopBar/TopBar";
 import HeroSectionBackground from "./PageComponents/HomePage/HeroSectionBackground";
 import SearchField from "./PageComponents/HomePage/SearchField";
-import PopularProperty from "./PageComponents/HomePage/PopularProperty";
+import PopularProperty from "./PageComponents/HomePage/BestProperty";
 import ChooseUs from "./PageComponents/HomePage/ChooseUs";
+import FeaturedProperties from "./PageComponents/HomePage/FeaturedProperties";
 
 const HomePage = () => {
   return (
@@ -33,9 +34,14 @@ const HomePage = () => {
         <PopularProperty></PopularProperty>
       </div>
 
-      <div className="md:mx-[40px] mx-[25px] md:mt-[40px] mt-[25px]">
+      <div className="md:mt-[40px] mt-[25px]">
         <ChooseUs></ChooseUs>
       </div>
+
+      <div className="md:mx-[40px] mx-[25px]">
+        <FeaturedProperties></FeaturedProperties>
+      </div>
+      
     </div>
   );
 };
