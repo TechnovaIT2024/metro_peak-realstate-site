@@ -26,7 +26,7 @@ const ChooseUs = () => {
 
       {/* Parallax background div */}
       <div
-        className="md:h-[500px] bg-cover bg-center bg-no-repeat relative"
+        className="lg:h-[550px] bg-cover bg-center bg-no-repeat relative"
         style={{
           backgroundImage: `url(${whyChooseUsBG.src})`,
           backgroundAttachment: "fixed",
@@ -187,7 +187,7 @@ const ChooseUs = () => {
 
                         {/* Text with hover color change */}
                         <span className="relative z-10 group-hover:text-white">
-                          Sell Home
+                          Sell Property
                         </span>
                       </button>
                     </div>

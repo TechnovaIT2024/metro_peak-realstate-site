@@ -137,7 +137,7 @@ const PopularProperty = () => {
                 {AllApartment.map((apt) => (
                   <div
                     key={apt?.id}
-                    className="border border-[#e2e2e2] rounded-[8px] shadow-xl overflow-hidden hover:border-[#FF4136] transition-all duration-300"
+                    className="border border-[#e2e2e2] rounded-[8px] shadow-xl overflow-hidden transition-all duration-300"
                   >
                     {/* Image + For Sale */}
                     <div className="relative">
@@ -216,7 +216,7 @@ const PopularProperty = () => {
                     (apt) => (
                       <div
                         key={apt?.id}
-                        className="bg-white border border-[#dbdbdb] rounded-[8px] shadow-md overflow-hidden hover:border-[#FF4136] transition-all duration-300"
+                        className="bg-white border border-[#dbdbdb] rounded-[8px] shadow-md overflow-hidden transition-all duration-300"
                       >
                         {/* Same card content repeated */}
                         <div className="relative">

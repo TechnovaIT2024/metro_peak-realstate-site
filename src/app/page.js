@@ -6,6 +6,9 @@ import SearchField from "./PageComponents/HomePage/SearchField";
 import PopularProperty from "./PageComponents/HomePage/BestProperty";
 import ChooseUs from "./PageComponents/HomePage/ChooseUs";
 import FeaturedProperties from "./PageComponents/HomePage/FeaturedProperties";
+import MarketProperty from "./PageComponents/HomePage/MarketProperty";
+import SoldProperties from "./PageComponents/HomePage/SoldProperties";
+import Employees from "./PageComponents/HomePage/Employees";
 
 const HomePage = () => {
   return (
@@ -40,6 +43,18 @@ const HomePage = () => {
 
       <div className="md:mx-[40px] mx-[25px]">
         <FeaturedProperties></FeaturedProperties>
+      </div>
+
+      <div className="md:mt-[70px] mt-[40px]">
+        <MarketProperty></MarketProperty>
+      </div>
+
+      <div className="md:mt-[50px] mt-[40px]">
+        <SoldProperties></SoldProperties>
+      </div>
+
+      <div className="md:mt-[50px] mt-[40px] md:mx-[40px] mx-[25px]">
+        <Employees></Employees>
       </div>
       
     </div>

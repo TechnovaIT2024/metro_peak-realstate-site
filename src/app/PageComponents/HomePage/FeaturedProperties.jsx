@@ -93,7 +93,7 @@ const FeaturedProperties = () => {
         {AllBestProperty.map((Property) => (
           <div
             key={Property?.id}
-            className="bg-white border border-[#dbdbdb] rounded-[8px] shadow-md overflow-hidden hover:border-[#FF4136] transition-all duration-300"
+            className="bg-white border border-[#dbdbdb] rounded-[8px] shadow-md overflow-hidden transition-all duration-300"
           >
             {/* Same card content repeated */}
             <div className="relative">
