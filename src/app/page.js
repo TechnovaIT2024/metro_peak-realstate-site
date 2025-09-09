@@ -9,6 +9,8 @@ import FeaturedProperties from "./PageComponents/HomePage/FeaturedProperties";
 import MarketProperty from "./PageComponents/HomePage/MarketProperty";
 import SoldProperties from "./PageComponents/HomePage/SoldProperties";
 import Employees from "./PageComponents/HomePage/Employees";
+import Review from "./PageComponents/HomePage/Review";
+import Footer from "./CommonComponents/Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -55,6 +57,14 @@ const HomePage = () => {
 
       <div className="md:mt-[50px] mt-[40px] md:mx-[40px] mx-[25px]">
         <Employees></Employees>
+      </div>
+
+      <div className="md:mt-[50px] mt-[40px]  md:mx-[40px] mx-[25px]">
+        <Review></Review>
+      </div>
+
+      <div className="md:mt-[50px] mt-[40px]">
+        <Footer></Footer>
       </div>
       
     </div>

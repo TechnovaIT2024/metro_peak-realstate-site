@@ -112,8 +112,9 @@ const ChooseUs = () => {
 
             <div className="flex justify-evenly items-center md:mt-[30px] mt-[30px]">
               <div className="md:flex justify-between items-center w-full gap-[15px] md:space-y-[0px] space-y-[15px]">
+
                 <div className="w-full text-center p-[10px] rounded-[6px] bg-[#FFFFFF] group">
-                  <div className="border-2 rounded-[5px] border-[#FF4136] space-y-[5px] px-[30px] py-[40px]">
+                  <div className="border rounded-[5px] border-[#FF4136] space-y-[5px] px-[30px] py-[40px]">
                     <div className="flex justify-center">
                       <Image
                         src={searchHome}
@@ -153,7 +154,7 @@ const ChooseUs = () => {
                 </div>
 
                 <div className="w-full text-center p-[10px] rounded-[6px] bg-[#FFFFFF] group">
-                  <div className="border-2 rounded-[5px] border-[#FF4136] space-y-[5px] px-[30px] py-[40px]">
+                  <div className="border rounded-[5px] border-[#FF4136] space-y-[5px] px-[30px] py-[40px]">
                     <div className="flex justify-center">
                       <Image
                         src={sellProperty}
@@ -195,7 +196,7 @@ const ChooseUs = () => {
                 </div>
 
                 <div className="w-full text-center p-[10px] rounded-[6px] bg-[#FFFFFF] group">
-                  <div className="border-2 rounded-[5px] border-[#FF4136] space-y-[5px] px-[30px] py-[40px]">
+                  <div className="border rounded-[5px] border-[#FF4136] space-y-[5px] px-[30px] py-[40px]">
                     <div className="flex justify-center">
                       <Image
                         src={rentHome}

@@ -1,146 +1,130 @@
-import React from "react";
-import FooterLogo from "../../../../public/navlogo.png";
-import Image from "next/image";
-import NavLink from "../NavBar/NavLink";
-import { FaLocationDot } from "react-icons/fa6";
-import { MdOutlineAlternateEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
+"use client";
 import Link from "next/link";
-import footerBg from "../../../../public/light-grey-dots-background_78370-2583.jpg";
+import React from "react";
+import { FaPhone, FaEnvelope, FaHome } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
-  const FooterLinks = [
-    {
-      path: "/",
-      title: "HOME",
-    },
-    {
-      path: "/about",
-      title: "ABOUT US",
-    },
-    {
-      path: "/services",
-      title: "OUR SERVICES",
-    },
-    {
-      path: "/contact",
-      title: "CONTACT US",
-    },
-  ];
-
   return (
-    <div
-      className=""
-      style={{
-        backgroundImage: `url(${footerBg.src})`, // Use the `.src` property for imported images in Next.js
-      }}
-    >
-      <div className="md:flex justify-between mx-auto lg:px-[40px] md:px-[30px] px-[20px] md:py-[50px] py-[20px] border-t">
-        <div className="flex flex-col items-start justify-start md:w-[25%]">
-          <Image
-            src={FooterLogo}
-            alt="Footer Logo"
-            width={120}
-            height={120}
-          ></Image>
-          <p className="text-[16px] font-medium md:mt-3 mt-1 tracking-wide">
-            TRANSFORMING IDEAS <br />
-            INTO DIGITAL <span className="text-[#ED008E]">SUCCESS</span>
+    <footer className="bg-black text-white py-10 md:px-[40px] px-[25px]">
+      <div className="mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
+        {/* About Pillar */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">About Metro Peak</h3>
+          <p className="text-sm text-gray-300 mb-4">
+            Metro Peak is a luxury to the resilience, adaptability, Spacious
+            modern villa living room with centrally placed swimming pool
+            blending indoor/outdoor.
           </p>
-        </div>
 
-        <div className="md:w-[25%] mt-5 md:mt-0">
-          <h2 className="text-lg font-bold bg-gradient-to-r from-[#2C3191] to-[#EF018F] text-transparent bg-clip-text">
-            QUICK LINKS
-          </h2>
-          <nav>
-            <ul className="md:mt-4 mt-2 flex flex-col md:space-y-2">
-              {FooterLinks.map(({ path, title }) => (
-                <li key={path} className="relative group">
-                  <NavLink
-                    exact={path === "/"}
-                    activeClassName="text-[#F0018E] font-bold duration-300"
-                    href={path}
-                    className="inline-block"
-                  >
-                    {title}
-                  </NavLink>
-                  <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#2D3091] transition-all duration-300 group-hover:w-[100px]"></span>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+          <div className="space-y-[10px]">
+            <div className="flex items-center gap-2 mb-2">
+              <FaPhone className="text-[#FF4136]" />
+              <span className="text-sm">+880 1555-45 45 45</span>
+            </div>
 
-        <div className="md:w-[35%] mt-5 md:mt-0">
-          <h2 className="text-lg font-bold bg-gradient-to-r from-[#2C3191] to-[#EF018F] text-transparent bg-clip-text">
-            CONTACT US
-          </h2>
-          <div className="md:mt-4 mt-2">
-            <div className="flex items-center gap-2 hover:-translate-x-2 hover:scale-100 duration-200">
-              <FaLocationDot className="text-[18px] text-[#EF018F] "></FaLocationDot>
-              <p className="text-base font-bold text-[#2C3191]">
-                House No 20, Apt 7B, Main Road <br />
-                Block-G, Aftabnagar, Dhaka - 1212
-              </p>
+            <div className="flex items-center gap-2">
+              <FaEnvelope className="text-[#FF4136]" />
+              <span className="text-sm">info.metro_peak@gmail.com</span>
             </div>
-            <div className="my-3 flex items-center gap-2 hover:-translate-x-2 hover:scale-100 duration-200">
-              <MdOutlineAlternateEmail className="text-[18px] text-[#EF018F]"></MdOutlineAlternateEmail>
-              <p className="text-base font-bold text-[#2C3191]">
-                technova.it2024@gmail.com
-              </p>
-            </div>
-            <div className="flex items-center gap-2 hover:-translate-x-2 hover:scale-100 duration-200">
-              <FaPhone className="text-[18px] text-[#EF018F]"></FaPhone>
-              <p className="text-base font-bold text-[#2C3191]">
-                +88013-3983-7965
-              </p>
+
+            <div className="flex items-center gap-2">
+              <FaLocationDot className="text-[#FF4136]" />
+              <span className="text-sm">
+                1234 Main Street Springfield, IL 62704 USA
+              </span>
             </div>
           </div>
         </div>
 
-        <div className="md:w-[15%] mt-5 md:mt-0">
-          <h2 className="text-lg font-bold bg-gradient-to-r from-[#2C3191] to-[#EF018F] text-transparent bg-clip-text">
-            FOLLOW US
-          </h2>
+        {/* Featured Houses */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Featured Houses</h3>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> #Villa
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> #Commercial
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> #Farm Houses
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> #Apartments
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> #Apartments
+            </li>
+          </ul>
+        </div>
 
-          <div className="space-y-3 md:mt-4 mt-2">
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> Strategy Services
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> Management
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> Privacy & Policy
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> Sitemap
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> Term & Conditions
+            </li>
+          </ul>
+        </div>
 
-            <Link
-              href={"https://www.linkedin.com/in/technova-it-050b11342/"}
-              className="flex items-center gap-3 ease-in-out hover:-translate-x-2 hover:scale-100 duration-200"
-            >
-              <FaLinkedin className="text-3xl text-[#3876b0]"></FaLinkedin>
-              <h2 className="text-xl font-semibold">Linkedin</h2>
-            </Link>
+        {/* Support */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Support</h3>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> Help Center
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> FAQs
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> Contact Us
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> Ticket Support
+            </li>
+            <li className="flex items-center gap-2">
+              <FaHome className="text-[#FF4136]" /> Live Chat
+            </li>
+          </ul>
+        </div>
 
-            <Link
-              href={"https://www.facebook.com/profile.php?id=61576273551896"}
-              className="flex items-center gap-3 transition ease-in-out hover:-translate-x-2 hover:scale-100 duration-200"
-            >
-              <FaFacebook className="text-3xl text-[blue]"></FaFacebook>
-              <h2 className="text-xl font-semibold">Facebook</h2>
-            </Link>
-            
-            <Link
-              href={"https://www.instagram.com/technova_it/?hl=en"}
-              className="flex items-center gap-3 ease-in-out hover:-translate-x-2 hover:scale-100 duration-200"
-            >
-              <FaInstagram className="text-3xl text-[#FD1D1D]" />
-              <h2 className="text-xl font-semibold">Instagram</h2>
-            </Link>
-            
+        {/* Pillar Location */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Pillar Location</h3>
+          <div className="w-full h-40 rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19801.43727436566!2d-0.1234937!3d51.5032974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900000001%3A0xabcdef123456789!2sLondon%20Eye!5e0!3m2!1sen!2suk!4v1694270400000!5m2!1sen!2suk"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
-      <div className="text-center text-white text-base font-medium bg-[#2C3191] border-t-2 py-[10px]">
-        <h2> © 2024 Technova IT All Rights Reserved.</h2>
+
+      <div className="mt-[15px] border-t-2 border-[#FF4136]">
+        <p className="text-[16px] text-center mt-[15px]">Copyright © 2025 Metro Peak. All Rights Reserved.</p>
+        <Link href={"https://www.technovait.tech/"} className="text-[14px] flex justify-center mt-[5px] font-semibold">{"("} Developed By Technova IT {")"}</Link>
       </div>
-    </div>
+    </footer>
   );
 };
 
