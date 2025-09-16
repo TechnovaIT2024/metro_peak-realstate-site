@@ -67,7 +67,10 @@ const HeroSectionBackground = () => {
         {/* Circle Text */}
         <svg
           viewBox="0 0 300 300"
-          className="absolute w-full h-full animate-spin-slow"
+          className="absolute w-full h-full"
+          style={{
+            animation: "spin 10s linear infinite",
+          }}
         >
           <defs>
             <path
@@ -86,6 +89,16 @@ const HeroSectionBackground = () => {
         <button className="flex items-center justify-center w-[60px] h-[60px] border border-white rounded-full shadow-lg hover:bg-[#FF4136] transition">
           <FaPlay className="text-[#FF4136] hover:text-white" />
         </button>
+
+        {/* Inline keyframes */}
+        <style>
+          {`
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    `}
+        </style>
       </div>
     </div>
   );

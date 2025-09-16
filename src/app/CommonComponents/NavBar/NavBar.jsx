@@ -28,11 +28,11 @@ const NavBar = () => {
       title: "ABOUT US",
     },
     {
-      path: "/services",
+      path: "/properties",
       title: "PROPERTY'S",
     },
     {
-      path: "/portfolio",
+      path: "/blog",
       title: "BLOG'S",
     },
     {
