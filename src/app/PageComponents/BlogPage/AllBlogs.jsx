@@ -1,10 +1,18 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaHeart } from "react-icons/fa";
+import { FaChevronCircleDown, FaHeart } from "react-icons/fa";
 import shape1 from "../../../../public/shape.png";
 import shape2 from "../../../../public/shape (2).png";
 import shape3 from "../../../../public/shape (3).png";
+
+// gallery Images
+import galleryImage1 from "../../../../public/gallrey image 1.jpg";
+import galleryImage2 from "../../../../public/gallrey image 2.jpg";
+import galleryImage3 from "../../../../public/gallrey image 3.jpg";
+import galleryImage4 from "../../../../public/gallrey image 4.jpg";
+import galleryImage5 from "../../../../public/gallrey image 5.jpg";
+
 import Image from "next/image";
 
 const blogsData = [
@@ -78,7 +86,76 @@ const AllBlogs = () => {
   };
 
   return (
-    <div className="mx-5 md:mx-10 my-10 space-y-10">
+    <div className="mx-5 md:mx-10 my-[50px] space-y-10">
+      <div className="md:flex flex-row-reverse items-center gap-[25px] md:space-y-0 space-y-[20px] mb-[60px]">
+        <div className="inline-grid grid-cols-3 gap-[20px] md:w-[55%] w-full">
+
+          <div className="overflow-hidden col-span-2 rounded-lg h-[200px] shadow-lg border border-transparent hover:border-[#ff4136] transition-all duration-300">
+            <Image
+              src={galleryImage1}
+              alt="Gallery Image 1"
+              className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-lg row-span-2 h-[420px] shadow-lg border border-transparent hover:border-[#ff4136] transition-all duration-300">
+            <Image
+              src={galleryImage2}
+              alt="Gallery Image 2"
+              className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-lg h-[200px] shadow-lg border border-transparent hover:border-[#ff4136] transition-all duration-300">
+            <Image
+              src={galleryImage3}
+              alt="Gallery Image 3"
+              className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-lg h-[200px] shadow-lg border border-transparent hover:border-[#ff4136] transition-all duration-300">
+            <Image
+              src={galleryImage4}
+              alt="Gallery Image 4"
+              className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+            />
+          </div>
+        </div>
+
+        <div className="md:w-[45%] w-full">
+          {/* title div with cards */}
+          <div>
+            <p className="text-[20px] font-bold border-b-2 border-[#FF4136] w-fit pe-[8px] text-[#383838]">
+              Our Blogs
+            </p>
+            <h3 className="md:text-[40px] text-[30px] font-bold uppercase text-[#000000] leading-[50px] my-[10px]">
+              Stay Ahead in Real Estate <br /> with
+              <span className="text-[#FF4136] italic"> Metro Peak</span>
+            </h3>
+
+            <p className="text-[16px] font-medium italic text-[#383838]">
+              Discover expert insights, market trends, and helpful tips in our
+              blog section. From investment strategies to lifestyle inspiration,
+              we bring you trusted knowledge to guide your real estate journey.
+            </p>
+
+            <button className="relative overflow-hidden w-fit px-[20px] py-[8px] border rounded-[6px] text-[#ffffff] bg-black font-semibold transition-colors duration-500 group mt-[20px]">
+              {/* Animated background */}
+              <span className="absolute top-0 left-[-100%] w-full h-full bg-[#FF4136] transition-all duration-500 ease-in-out group-hover:left-0"></span>
+
+              {/* Text with hover color change */}
+              <div className="relative z-10 flex items-center gap-[10px]">
+                <span className=" group-hover:text-white uppercase">
+                  Read Blogs
+                </span>
+                <FaChevronCircleDown className="text-[24px]" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
       {[0, 2, 4].map((startIndex, rowIndex) => {
         const shape = shapeImages[rowIndex];
         return (
