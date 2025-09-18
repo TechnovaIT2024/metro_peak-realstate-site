@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { BiArea } from "react-icons/bi";
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -147,7 +148,7 @@ const FeaturedProperties = () => {
                 <p className="text-[22px] font-bold text-[#4d4d4d] hover:text-[#FF4136] duration-300">
                   {Property?.price}
                 </p>
-                <button className="relative overflow-hidden w-fit px-[20px] py-[5px] border border-[#cacaca] rounded-[6px] text-[#222222] font-semibold transition-colors duration-500 group">
+                <Link href={'/properties'} className="relative overflow-hidden w-fit px-[20px] py-[5px] border border-[#cacaca] rounded-[6px] text-[#222222] font-semibold transition-colors duration-500 group">
                   {/* Animated background */}
                   <span className="absolute top-0 left-[-100%] w-full h-full bg-[#FF4136] transition-all duration-500 ease-in-out group-hover:left-0"></span>
 
@@ -155,7 +156,7 @@ const FeaturedProperties = () => {
                   <span className="relative z-10 group-hover:text-white">
                     View More
                   </span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>

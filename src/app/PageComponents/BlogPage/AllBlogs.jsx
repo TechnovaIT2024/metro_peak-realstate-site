@@ -14,6 +14,7 @@ import galleryImage4 from "../../../../public/gallrey image 4.jpg";
 import galleryImage5 from "../../../../public/gallrey image 5.jpg";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const blogsData = [
   {
@@ -246,13 +247,13 @@ const AllBlogs = () => {
                       {blog.description}
                     </p>
 
-                    <button className="relative overflow-hidden w-fit px-[20px] py-[5px] border bg-[#FF4136] rounded-[6px] text-[#ffffff] font-semibold transition-colors duration-500 group mt-[15px]">
+                    <Link href={'/single_blog'} className="relative overflow-hidden w-fit px-[20px] py-[5px] border bg-[#FF4136] rounded-[6px] text-[#ffffff] font-semibold transition-colors duration-500 group mt-[15px]">
                       {/* Animated background */}
                       <span className="absolute top-0 left-[-100%] w-full h-full bg-[#000] transition-all duration-500 ease-in-out group-hover:left-0"></span>
                       <span className="relative z-10 group-hover:text-white">
                         Read More
                       </span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}
