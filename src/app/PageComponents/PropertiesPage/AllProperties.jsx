@@ -118,9 +118,9 @@ export default function AllProperties() {
   return (
     <div className="md:mx-[40px] mx-[25px] space-y-[40px]">
       {/* Filter Bar */}
-      <div className="border border-[#dadada] shadow-md w-full flex flex-wrap items-center justify-between px-[15px] py-[20px] rounded-[8px]">
+      <div className="border border-[#dadada] shadow-md w-full flex flex-col md:flex-row md:flex-wrap md:items-center md:justify-between gap-4 px-[15px] py-[20px] rounded-[8px]">
         {/* Category Filter */}
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2 justify-center md:justify-start">
           {["All", "Apartment", "Commercial", "Land or Plot", "Farm house"].map(
             (cat) => (
               <button
@@ -129,7 +129,7 @@ export default function AllProperties() {
                   setCategory(cat);
                   setPage(1);
                 }}
-                className={`relative overflow-hidden w-fit px-[15px] py-[5px] border border-[#e6e6e6] hover:border-[#FF4136] rounded-[6px] font-semibold transition-colors duration-500 group shadow-md ${
+                className={`relative overflow-hidden md:w-fit w-full px-[15px] py-[5px] border border-[#e6e6e6] hover:border-[#FF4136] rounded-[6px] font-semibold transition-colors duration-500 group shadow-md ${
                   category === cat
                     ? "bg-[#FF4136] text-white border-[#FF4136]"
                     : "bg-white text-[#585858]"
@@ -148,8 +148,9 @@ export default function AllProperties() {
         </div>
 
         {/* Search and Sort */}
-        <div className="flex items-center gap-3">
-          <div className="flex items-center w-64 rounded-md overflow-hidden h-10 border border-[#dadada] shadow-md">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
+          {/* Search */}
+          <div className="flex items-center w-full sm:w-64 rounded-md overflow-hidden h-10 border border-[#dadada] shadow-md">
             {/* Icon Section */}
             <div className="bg-[#FF4136] flex items-center justify-center h-full w-10">
               <FaSearch className="w-4 h-4 text-white" />
@@ -168,21 +169,15 @@ export default function AllProperties() {
             />
           </div>
 
+          {/* Sort Dropdown */}
           <select
-            className="px-3 py-2 border border-[#dadada] rounded-md text-black focus:outline-none cursor-pointer shadow-md"
+            className="px-3 py-2 border border-[#dadada] rounded-md text-black focus:outline-none cursor-pointer shadow-md w-full sm:w-auto"
             onChange={(e) => setSort(e.target.value)}
             value={sort}
           >
             <option value="">Sort by Price</option>
-            <option value="asc" className="hover:bg-[#FF4136] hover:text-white">
-              Low to High
-            </option>
-            <option
-              value="desc"
-              className="hover:bg-[#FF4136] hover:text-white"
-            >
-              High to Low
-            </option>
+            <option value="asc">Low to High</option>
+            <option value="desc">High to Low</option>
           </select>
         </div>
       </div>
@@ -244,7 +239,7 @@ export default function AllProperties() {
               {/* Price and button */}
               <div className="flex justify-between items-center mt-4">
                 <p className="text-[22px] font-bold text-[#4d4d4d] hover:text-[#FF4136] duration-300">
-                 ${item?.price}
+                  ${item?.price}
                 </p>
                 <button className="relative overflow-hidden w-fit px-[20px] py-[5px] border border-[#cacaca] rounded-[6px] text-[#FFF] bg-[#FF4136] font-semibold transition-colors duration-500 group">
                   {/* Animated background */}

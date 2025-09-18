@@ -69,6 +69,12 @@ const Review = () => {
             delay: 2000,
             disableOnInteraction: false,
           }}
+          breakpoints={{
+            0: { slidesPerView: 1 }, // Mobile
+            640: { slidesPerView: 1 }, // Small tablets
+            768: { slidesPerView: 2 }, // Tablets
+            1024: { slidesPerView: 2 }, // Desktops
+          }}
           modules={[Pagination, Autoplay]}
           className="mySwiper"
         >
@@ -97,8 +103,8 @@ const Review = () => {
                 <Image
                   src={client.image}
                   alt={client.name}
-                  width={100} // 16 * 4px = 64px
-                  height={50} // 16 * 4px = 64px
+                  width={100}
+                  height={50}
                   className="rounded-full object-cover border-2 border-[#FF4136]"
                 />
               </div>
